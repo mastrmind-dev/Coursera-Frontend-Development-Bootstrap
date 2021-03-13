@@ -62,9 +62,87 @@
 							>
 						</li>
 					</ul>
+
+					<span class="navbar-text">
+						<a href="" data-toggle="modal" data-target="#loginModal">
+							<span class="fa fa-sign-in"></span> Login
+						</a>
+					</span>
 				</div>
 			</div>
 		</nav>
+
+		<div class="modal fade" id="loginModal" role="dialog">
+			<div class="modal-dialog modal-lg" role="content">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title">Login</h4>
+						<button class="close" type="button" data-dismiss="modal">
+							&times;
+						</button>
+					</div>
+					<div class="modal-body">
+						<form>
+							<div class="form-row">
+								<div class="form-group col-sm-4">
+									<!--sr-only means screen readers only. So the div with sr-only clss will only show to screen readers-->
+									<label for="exampleInputEmail3" class="sr-only"
+										>Email address</label
+									>
+									<!--form-control-sm gives a small size for the textarea-->
+									<input
+										type="email"
+										class="form-control form-control-sm mr-1"
+										placeholder="Enter email"
+										id="exampleInputEmail3"
+									/>
+								</div>
+
+								<div class="form-group col-sm-4">
+									<!--sr-only means screen readers only. So the div with sr-only clss will only show to screen readers-->
+									<label for="exampleInputPassword3" class="sr-only"
+										>Password</label
+									>
+									<!--form-control-sm gives a small size for the textarea-->
+									<input
+										type="password"
+										class="form-control form-control-sm mr-1"
+										placeholder="Enter password"
+										id="exampleInputPassword3"
+									/>
+								</div>
+
+								<div class="col-sm-auto">
+									<div class="form-check">
+										<input
+											type="checkbox"
+											id="checkboxModal"
+											class="form-check-input"
+										/>
+										<label for="checkboxModal" class="form-check-label"
+											>Remember me</label
+										>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-row">
+								<button
+									data-dismiss="modal"
+									class="btn btn-sm btn-secondary ml-auto"
+								>
+									Cancel
+								</button>
+								<button class="btn btn-primary btn-sm ml-1" type="submit">
+									Sign in
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<header class="jumbotron">
 			<div class="container">
 				<div class="row row-header">
@@ -81,7 +159,11 @@
 							<img src="img/logo.png" alt="" class="img-fluid col-sm-6" />
 							<a
 								href="#reservationTable"
-								class="btn btn-warning align-self-center justify-content-center col-sm-6 font-weight-bold"
+								class="btn btn-warning align-self-center justify-content-center col-sm-6 font-weight-bold text-white"
+								data-toggle="tooltip"
+								data-html="true"
+								title="Or Call us at <br><strong>+853 4567235476</strong>"
+								data-placement="bottom"
 								>Reserve Table</a
 							>
 						</div>
@@ -91,6 +173,86 @@
 		</header>
 
 		<div class="container">
+			<div class="row row-content">
+				<div class="col">
+					<div class="carousel slide" id="mycarousel" data-ride="carousel">
+						<div class="carousel-inner" role="listbox">
+							<div class="carousel-item active">
+								<img
+									src="img/uthappizza.png"
+									alt="uthappizza"
+									class="d-block img-fluid"
+								/>
+								<div class="carousel-caption d-none d-md-block mb-5">
+									<h2>
+										Uthappizza <span class="badge badge-danger">HOT</span>
+										<span class="badge badge-pill badge-secondary">$4.99</span>
+									</h2>
+									<p class="d-none d-sm-block">
+										A unique combination of Indian Uthappam (pancake) and
+										Italian pizza, topped with Cerignola olives, ripe vine
+										cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo
+										Paneer.
+									</p>
+								</div>
+							</div>
+
+							<div class="carousel-item">
+								<img
+									src="img/buffet.png"
+									alt="buffet"
+									class="d-block img-fluid"
+								/>
+								<div class="carousel-caption d-none d-md-block mb-5">
+									<h2>
+										Weekend Grand Buffet<span class="badge badge-danger ml-2"
+											>NEW</span
+										>
+									</h2>
+									<p class="d-none d-sm-block">
+										Featuring mouthwatering combinations with a choice of five
+										different salads, six enticing appetizers, six main entrees
+										and five choicest desserts. Free flowing bubbly and soft
+										drinks. All for just $19.99 per person
+									</p>
+								</div>
+							</div>
+
+							<div class="carousel-item">
+								<img
+									src="img/alberto.png"
+									alt="alberto"
+									class="d-block img-fluid"
+								/>
+								<div class="carousel-caption d-none d-md-block mb-5">
+									<h2>Alberto Somayya</h2>
+									<h4>Executive Chef</h4>
+									<p class="d-none d-sm-block">
+										Award winning three-star Michelin chef with wide
+										International experience having worked closely with whos-who
+										in the culinary world, he specializes in creating
+										mouthwatering Indo-Italian fusion experiences.
+									</p>
+								</div>
+							</div>
+						</div>
+<!--carousel controllers-->
+						<!--indicators-->
+						<ol class="carousel-indicators">
+							<li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+							<li data-target="#mycarousel" data-slide-to="1"></li>
+							<li data-target="#mycarousel" data-slide-to="2"></li>
+						</ol>
+						<!--previous and next icons-->
+						<a href="#mycarousel" class="carousel-control-prev" role="button" data-slide="prev">
+							<span class="carousel-control-prev-icon"></span>
+						</a>
+						<a href="#mycarousel" class="carousel-control-next" role="button" data-slide="next">
+							<span class="carousel-control-next-icon"></span>
+						</a>
+					</div>
+				</div>
+			</div>
 			<div class="row row-content align-items-center">
 				<div class="col-12 order-sm-last col-sm-4 col-md-3">
 					<h3>Our Lipsmacking Culinary Creations</h3>
@@ -312,5 +474,10 @@
 		<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
 		<script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
 		<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script>
+			$(document).ready(function () {
+				$('[data-toggle="tooltip"]').tooltip();
+			});
+		</script>
 	</body>
 </html>
