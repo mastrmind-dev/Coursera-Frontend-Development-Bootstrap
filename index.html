@@ -72,8 +72,8 @@
 			</div>
 		</nav>
 
-<!--Modals - All the modals are coded in here-->
-<!--sign in modal-->
+		<!--Modals - All the modals are coded in here-->
+		<!--sign in modal-->
 		<div class="modal fade" id="loginModal" role="dialog">
 			<div class="modal-dialog modal-lg" role="content">
 				<div class="modal-content">
@@ -158,34 +158,124 @@
 					<div class="modal-body">
 						<form>
 							<div class="form-row">
-								<div class="row">
-									<div class="col-12 col-sm-6 col-md-4">
-										<p class="font-weight-bold">Number of Guests</p>
+								<div class="col-12 col-sm-2">
+									<p class="font-weight-bold">Number of Guests</p>
+								</div>
+								<div class="col-12 col-sm">
+									<div class="form-check-inline">
+										<label for="one" class="form-check-label">
+											<input
+												type="radio"
+												class="form-check-input"
+												name="guestsCount"
+												id="one"
+											/>1
+										</label>
 									</div>
-									<div class="radio-inline ml-3 mr-2">
-										<input type="radio" name="radiobuttons" id="radio1" />
-										<label for="radio1">1</label>
+									<div class="form-check-inline">
+										<label for="two" class="form-check-label">
+											<input
+												type="radio"
+												class="form-check-input"
+												name="guestsCount"
+												id="two"
+											/>2
+										</label>
 									</div>
-									<div class="radio-inline mr-2">
-										<input type="radio" name="radiobuttons" id="radio2" />
-										<label for="radio2">2</label>
+									<div class="form-check-inline">
+										<label for="three" class="form-check-label">
+											<input
+												type="radio"
+												class="form-check-input"
+												name="guestsCount"
+												id="three"
+											/>3
+										</label>
 									</div>
-									<div class="radio-inline mr-2">
-										<input type="radio" name="radiobuttons" id="radio3" />
-										<label for="radio3">3</label>
+									<div class="form-check-inline">
+										<label for="four" class="form-check-label">
+											<input
+												type="radio"
+												class="form-check-input"
+												name="guestsCount"
+												id="four"
+											/>4
+										</label>
 									</div>
-									<div class="radio-inline mr-2">
-										<input type="radio" name="radiobuttons" id="radio4" />
-										<label for="radio4">4</label>
+									<div class="form-check-inline">
+										<label for="five" class="form-check-label">
+											<input
+												type="radio"
+												class="form-check-input"
+												name="guestsCount"
+												id="five"
+											/>5
+										</label>
 									</div>
-									<div class="radio-inline mr-2">
-										<input type="radio" name="radiobuttons" id="radio5" />
-										<label for="radio5">5</label>
+									<div class="form-check-inline">
+										<label for="six" class="form-check-label">
+											<input
+												type="radio"
+												class="form-check-input"
+												name="guestsCount"
+												id="six"
+											/>6
+										</label>
 									</div>
-									<div class="radio-inline mr-2">
-										<input type="radio" name="radiobuttons" id="radio6" />
-										<label for="radio6">6</label>
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="col-12 col-sm-2">
+									<p class="font-weight-bold">Section</p>
+								</div>
+								<div class="col-12 col-sm">
+									<div class="btn-group" role="group" aria-label="section">
+										<button
+											type="button"
+											class="btn btn-success"
+											name="options"
+											data-bs-toggle="button"
+											id="option1"
+											autocomplete="off"
+											checked
+										>
+											Non-Smoking
+										</button>
+										<button
+											class="btn btn-danger"
+											type="button"
+											name="optoins"
+											data-bs-toggle="button"
+											id="option2"
+											autocomplete="off"
+										>
+											Smoking
+										</button>
 									</div>
+								</div>
+							</div>
+							<div class="form-row mt-4">
+								<div class="col-12 col-sm-2">
+									<p class="font-weight-bold">Date and Time</p>
+								</div>
+								<div class="col-12 col-sm-4">
+									<input type="text" class="form-control" placeholder="Date" />
+								</div>
+								<div class="col-12 col-sm-4">
+									<input type="text" class="form-control" placeholder="Time" />
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="offset-sm-2 col-12">
+									<button
+										class="btn btn-secondary col-6 col-sm-2 mt-2 mr-1"
+										data-dismiss="modal"
+									>
+										Cancel
+									</button>
+									<button class="btn btn-primary col-6 col-sm-2 mt-2">
+										Reserve
+									</button>
 								</div>
 							</div>
 						</form>
@@ -193,7 +283,6 @@
 				</div>
 			</div>
 		</div>
-
 
 		<header class="jumbotron">
 			<div class="container">
@@ -287,18 +376,32 @@
 								</div>
 							</div>
 						</div>
-<!--carousel controllers-->
+						<!--carousel controllers-->
 						<!--indicators-->
 						<ol class="carousel-indicators">
-							<li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+							<li
+								data-target="#mycarousel"
+								data-slide-to="0"
+								class="active"
+							></li>
 							<li data-target="#mycarousel" data-slide-to="1"></li>
 							<li data-target="#mycarousel" data-slide-to="2"></li>
 						</ol>
 						<!--previous and next icons-->
-						<a href="#mycarousel" class="carousel-control-prev" role="button" data-slide="prev">
+						<a
+							href="#mycarousel"
+							class="carousel-control-prev"
+							role="button"
+							data-slide="prev"
+						>
 							<span class="carousel-control-prev-icon"></span>
 						</a>
-						<a href="#mycarousel" class="carousel-control-next" role="button" data-slide="next">
+						<a
+							href="#mycarousel"
+							class="carousel-control-next"
+							role="button"
+							data-slide="next"
+						>
 							<span class="carousel-control-next-icon"></span>
 						</a>
 					</div>
@@ -525,6 +628,5 @@
 		<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
 		<script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
 		<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-		
 	</body>
 </html>
