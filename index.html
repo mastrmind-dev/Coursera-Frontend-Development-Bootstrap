@@ -229,7 +229,12 @@
 									<p class="font-weight-bold">Section</p>
 								</div>
 								<div class="col-12 col-sm">
-									<div class="btn-group" data-toggle="button" role="group" aria-label="section">
+									<div
+										class="btn-group"
+										data-toggle="button"
+										role="group"
+										aria-label="section"
+									>
 										<button
 											type="button"
 											class="active btn btn-success"
@@ -406,15 +411,9 @@
 						</a>
 
 						<!--controllers for pausing the carousel-->
-						<div class="btn-group" id="carouselButton">
-							<button id="carousel-pause" class="btn btn-danger btn-sm">
-								<span class="fa fa-pause"></span>
-							</button>
-							<button id="carousel-play" class="btn btn-danger btn-sm">
-								<span class="fa fa-play"></span>
-							</button>
-						</div>
-
+						<button id="carouselButton" class="btn btn-danger btn-sm">
+							<span class="fa fa-pause"></span>
+						</button>
 					</div>
 				</div>
 			</div>
@@ -640,18 +639,18 @@
 		<script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
 		<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 		<script>
-			$(document).ready(function(){
-				$('#carousel-play').hide();
-				$('#mycarousel').carousel({interval : 2000});
-				$('#carousel-pause').click(function(){
-					$(this).hide();
-					$('#carousel-play').show();
-					$('#mycarousel').carousel('pause');
-				});
-				$('#carousel-play').click(function(){
-					$('#carousel-play').hide();
-					$('#carousel-pause').show();
-					$('#mycarousel').carousel('cycle');
+			$(document).ready(function () {
+				$("#mycarousel").carousel({ interval: 2000 });
+				$("#carouselButton").click(function () {
+					if ($(this).children("span").hasClass("fa-pause")) {
+						$("#mycarousel").carousel("pause");
+						$(this).children('span').removeClass('fa-pause');
+						$(this).children('span').addClass('fa-play');
+					} else {
+						$("#mycarousel").carousel("cycle");
+						$(this).children('span').removeClass('fa-play');
+						$(this).children('span').addClass('fa-pause');
+					}
 				});
 			});
 		</script>
